@@ -12,7 +12,7 @@ When working with AWS [CodeArtifact][code-artifact] it is common to use ephemeri
 
 To resolve this, this plugin scans all the configured resolvers. If any of them are [CodeArtifact][code-artifact] resolvers it will automatically use the [AWS CLI][aws-cli] to attempt to get new ephemerial credentials. This behavior can be overridden with the setting key `awsCodeArtifactAuthTokenForRepoFunction`.
 
-# Know Issues #
+# Known Issues #
 
 * Publishing to [CodeArtifact][code-artifact] doesn't work out of the box. [CodeArtifact][code-artifact] only accepts maven style publishing and it is _very_ strict about the artifact naming. You can use [sbt-aether-deploy][sbt-aether-deploy] to deploy non-SNAPSHOT artifacts, but as of 2022-07-22, [sbt-aether-deploy][sbt-aether-deploy]'s syntax for SNAPSHOTs is rejected by [CodeArtifact][code-artifact] (I'm not sure who is at fault.).
 * You won't get `maven-metadata.xml`.
