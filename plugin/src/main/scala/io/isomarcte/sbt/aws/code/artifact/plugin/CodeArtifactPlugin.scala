@@ -65,48 +65,5 @@ object CodeArtifactPlugin extends AutoPlugin {
 
         credentials.toList
       }
-      // publishTo := {
-      //   val original: Option[Resolver] = publishTo.?.value.getOrElse(None)
-      //   val publish: Option[(String, CodeArtifactRepo)] = awsCodeArtifactPublishRepo.?.value
-      //   val snapshot: Option[(String, CodeArtifactRepo)] = awsCodeArtifactSnapshotPublishRepo.?.value
-
-      //   val target: Option[(String, CodeArtifactRepo)] =
-      //     if (isSnapshot.value) {
-      //       snapshot
-      //     } else {
-      //       publish
-      //     }
-
-      //   target.fold(original){
-      //     case (name, repo) => Some(name at repo.url)
-      //   }
-      // },
-      // resolvers ++= {
-      //   val base: Vector[Resolver] = awsCodeArtifactResolverRepos.value.toVector.foldMap{
-      //     case (name, repo) => Vector(name at repo.url)
-      //   }
-      //   val publishBase: Vector[Resolver] = awsCodeArtifactPublishRepo.?.value.toVector.map{
-      //     case (name, repo) => name at repo.url
-      //   }
-      //   val snapshotBase: Vector[Resolver] = awsCodeArtifactSnapshotPublishRepo.?.value.toVector.map{
-      //     case (name, repo) => name at repo.url
-      //   }
-
-      //   val publish: Vector[Resolver] =
-      //     if (awsCodeArtifactUsePublishInResolvers.value) {
-      //       publishBase
-      //     } else {
-      //       Vector.empty
-      //     }
-
-      //   val snapshot: Vector[Resolver] =
-      //     if (awsCodeArtifactUseSnapshotInResolvers.value) {
-      //       snapshotBase
-      //     } else {
-      //       Vector.empty
-      //     }
-
-      //   base ++ publish ++ snapshot
-      // }
     )
 }
